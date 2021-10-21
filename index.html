@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="JAVASCRIPT/constants.js"></script>
+    <script src="JAVASCRIPT/model/Position.js"></script>
+    <script src="JAVASCRIPT/model/Dimension.js"></script>
+    <script src="JAVASCRIPT/model/Movement.js"></script>
+    <script src="JAVASCRIPT/model/Sprite.js"></script>
+    <script src="JAVASCRIPT/model/Paddle.js"></script>
+    <script src="JAVASCRIPT/model/Ball.js"></script>
+    <script src="JAVASCRIPT/model/Brick.js"></script>
+    <script src="JAVASCRIPT/model/Player.js"></script>
+    <script src="JAVASCRIPT/view/view.js"></script>
+    <script src="JAVASCRIPT/model/Game.js"></script>
+    <script src="JAVASCRIPT/ctrl/PaddleCtrl.js"></script>
+    <script src="JAVASCRIPT/ctrl/BallCtrl.js"></script>
+    <script src="JAVASCRIPT/ctrl/GameCtrl.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Casse Brique ! </h1>
+        <h2>WEBG2 - g54254 - Andrian Butuc</h2>
+    </header>
+    <main >
+        <div class="info">
+            <span id="life"></span>
+            <span id="level"></span>
+            <span id="score"></span>
+        </div>
+        <div id="scene">
+            <div id="message"></div>
+        </div>
+    </main>
+    <footer>
+        <p>Auteur 54254 - Andrian Butuc</p>
+    </footer>
+    <script>
+        let game = new Game();
+        let view = new View();
+        let gameCtrl = new GameCtrl(game,view);
+        gameCtrl.play();
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body{
+    box-sizing: content-box;    
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 4fr auto;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+header{
+    grid-area: header;
+    text-align: center;
+    background-color: rgb(29, 29, 122);
+    color: white;
+}
+main{
+    grid-area: main;
+}
+main h2{
+    text-align: center;
+    font-size: 3em;
+}
+.info{
+    top: 10px;
+    height: 30px;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#score{
+    position: absolute;
+    color: rgb(29, 29, 122);
+}
+#level{
+     position: absolute;
+     color: rgb(29, 29, 122);
+}
+#message{
+    position: absolute;
+    color:rgb(70, 2, 216);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#scene {
+    box-sizing: content-box;
+    border: solid  rgb(29, 29, 122);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 3px;
+    
+}
+#paddle{
+    background-color: rgb(29, 29, 122);
+    position: absolute ;
+    bottom: 0;
+    border-radius: 30%;
+}
+#ball{
+    background-color: rgb(29, 29, 122);
+    position: absolute ;
+    border-radius: 50%;
+}
+.brick{
+    background-color: rgb(14, 14, 20);
+    position: absolute;
+    border: 2px solid rgb(133, 4, 47);
+}
+footer{
+    grid-area: footer;
+    margin-left: 5px;
+}
